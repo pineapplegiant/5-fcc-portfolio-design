@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;700&display=swap");
+
+/* ==========================================================================
+GLOBAL STYLES
+======================================================================== */
+
+html {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  letter-spacing: -1px;
+  background: var(--windows-blue-green);
+}
+
+:root {
+  --gray: #c0c0c0;
+  --light-gray: #cccccc;
+  --black: #000000;
+  --white: #ffffff;
+  --blue: #000b80; /*selected window color blue*/
+  --off-white: #e0e0e0;
+
+  /*For shading them buttons*/
+  --button-silver: #7a7a7a;
+  --button-gray: #dfdfdf;
+
+  /*For background*/
+  --windows-blue-green: #008080;
+  --windows-baby-blue: #5c90f5;
+  --windows-blue: #02254b;
+  --window-width: 95%;
+}
+
+a {
+  color: var(--white);
+  font-weight: 300;
+}
+
+a:hover,
+a:focus {
+  color: var(--off-white);
+}
+
+/* ==========================================================================
+TYPOGRAPHY
+======================================================================== */
+
+h1 {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 1.563rem;
+  font-weight: 700;
+}
+
+p {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+/* ==========================================================================
+NAVBAR/NAVIGATION
+======================================================================== */
+
+nav {
+  display: flex;
+  z-index: 9999;
+  align-items: center;
+  background-color: var(--gray);
+  border: 1px solid var(--black);
+  border-top: 2px solid var(--white);
+  padding: 5px 5px 0px 5px;
+  width: 100%;
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  max-height: 62px;
+  height: 9%;
+}
+
+/*Display none on mobile first so they only appear in little menu*/
+nav > button:not(:first-child) {
+  display: none;
+  margin-left: 1.3rem;
+}
+
+nav button img {
+  height: 32px;
+  height: 32px;
+  margin-right: 7px;
+}
+
+#portfolio-btn img {
+  height: 24px;
+  width: 24px;
+}
+
+button {
+  outline: none;
+  background-color: var(--gray);
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+  height: 80%;
+  padding: 10px 20px 5px 10px;
+  border-top: 3px ridge var(--white);
+  border-left: 3px ridge var(--white);
+  border-right: 2px solid var(--button-silver);
+  border-bottom: 2px solid var(--button-silver);
+}
+
+button:hover,
+button:focus {
+  outline: none;
+  background: var(--light-gray);
+  transition: background-color 0.05s ease-in-out;
+}
+
+.active {
+  outline: none;
+  border-bottom: 3px ridge var(--white);
+  border-right: 3px ridge var(--white);
+  border-left: 2px solid var(--button-silver);
+  border-top: 2px solid var(--button-silver);
+}
+
+button:active {
+  outline: none;
+  border-bottom: 3px ridge var(--white);
+  border-right: 3px ridge var(--white);
+  border-left: 2px solid var(--button-silver);
+  border-top: 2px solid var(--button-silver);
+}
+
+#time-div {
+  color: #000;
+  display: flex;
+  border-bottom: 3px ridge var(--white);
+  border-right: 3px ridge var(--white);
+  border-left: 2px solid var(--button-silver);
+  border-top: 2px solid var(--button-silver);
+  margin-left: auto;
+  height: 80%;
+  max-height: 60px;
+  padding: 10px 20px;
+}
+
+/* ==========================================================================
+SECTIONS
+========================================================================== */
+
+.section {
+  padding: 15px;
+  height: 100vh;
+}
+
+/*PORTFOLIO*/
+#welcome-section {
+  background-color: var(--windows-blue-green);
+}
+
+/*Windows Recycling Bin */
+.trash-container {
+  width: 80px;
+  margin-bottom: 25px;
+}
+
+.trash {
+  width: 100%;
+}
+
+.trash img {
+  display: block;
+  margin: 3px auto;
+}
+
+.trash p {
+  margin: 0 auto;
+  text-align: center;
+}
+
+/*Default settings for each window*/
+.window {
+  resize: both;
+  overflow: auto;
+  position: absolute;
+  z-index: 9000;
+  width: 760px;
+  max-width: 950px;
+  max-height: 448px;
+  padding: 2px;
+  background: var(--gray);
+  border: 1px solid var(--button-gray);
+  border-top: 2px solid var(--white);
+}
+
+.window__title {
+  cursor: move;
+  background: var(--blue);
+  border: 2px solid var(--button-silver);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 6px auto;
+  width: var(--window-width);
+}
+
+.window__title-text {
+  display: inline-flex;
+  align-items: center;
+  color: var(--white);
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.window__title-icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.window__title-icon {
+  margin: 2px;
+}
+
+.window__body {
+  color: var(--black) !important;
+  display: flex;
+  flex-direction: column;
+  background: var(--white);
+  width: var(--window-width);
+  border-top: 2px ridge var(--button-silver);
+  border-bottom: 1px solid var(--button-silver);
+  border-left: 2px ridge var(--button-silver);
+  padding: 43px;
+  margin: 0 auto;
+}
+
+.window__body img {
+  width: 100%;
+  justify-self: center;
+}
+
+.window__footer {
+  height: 20px;
+  margin: 6px auto;
+  width: var(--window-width);
+  border-bottom: 3px ridge var(--white);
+  border-right: 3px ridge var(--white);
+  border-left: 2px solid var(--button-silver);
+  border-top: 2px solid var(--button-silver);
+}
+
+/*PROJECTS*/
+#projects {
+  background-color: var(--windows-baby-blue);
+  background: url("./img/bg/windxp.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.projects-container {
+  display: flex;
+}
+
+/*CONTACT*/
+#contact {
+  background-color: var(--windows-blue);
+  background: url("./img/bg/wind10.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.black {
+  color: var(--black);
+}
+
+/* ==========================================================================
+* Media queries
+======================================================================== */
+
+/* This applies from 600px onwards*/
+@media (min-width: 540px) {
+  h1 {
+    font-size: 2.45rem;
+  }
+}
+
+@media (min-width: 670px) {
+  .window__body {
+    flex-direction: row;
+  }
+
+  .window__body img {
+    max-width: 65%;
+    margin-left: 20px;
+  }
+}
+@media (min-width: 775px) {
+  h1 {
+    font-size: 3.05rem;
+  }
+  nav > button:not(:first-child) {
+    display: flex;
+  }
+}

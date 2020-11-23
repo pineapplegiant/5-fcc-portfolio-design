@@ -1,0 +1,10 @@
+<svg id="minimize_button" data-name="minimize button" xmlns="http://www.w3.org/2000/svg" width="22.629" height="20.5" viewBox="0 0 22.629 20.5">
+  <g id="Default_plain_-button" data-name="Default plain -button">
+    <rect id="Rectangle_7" data-name="Rectangle 7" width="22" height="20" fill="silver"/>
+    <path id="Path_1" data-name="Path 1" d="M2030,101.018h22.129v-20" transform="translate(-2030 -81.018)" fill="none" stroke="#000" stroke-width="1"/>
+    <path id="Path_2" data-name="Path 2" d="M2031.355,100.045H2051.5v-18" transform="translate(-2030.354 -81.052)" fill="none" stroke="gray" stroke-width="1"/>
+    <path id="Path_3" data-name="Path 3" d="M2030,99.993V81.033h21.131" transform="translate(-2029.498 -80.515)" fill="none" stroke="#fff" stroke-width="1"/>
+    <path id="Path_4" data-name="Path 4" d="M2030.749,98.5V81.525h19.1" transform="translate(-2029.234 -80.01)" fill="none" stroke="#dfdfdf" stroke-width="1"/>
+  </g>
+  <path id="Path_5" data-name="Path 5" d="M2033.6,100.762h8.75" transform="translate(-2027 -86)" fill="none" stroke="#000" stroke-width="2"/>
+</svg>
